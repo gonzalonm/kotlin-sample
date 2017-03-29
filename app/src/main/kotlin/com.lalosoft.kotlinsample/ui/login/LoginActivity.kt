@@ -1,12 +1,14 @@
-package com.lalosoft.kotlinsample
+package com.lalosoft.kotlinsample.ui.login
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
-import android.widget.Toast
-import kotlinx.android.synthetic.main.content_login.login_button
+import com.lalosoft.kotlinsample.R
+import com.lalosoft.kotlinsample.ui.main.MainActivity
+import kotlinx.android.synthetic.main.content_login.*
 
 class LoginActivity : AppCompatActivity() {
 
@@ -22,8 +24,9 @@ class LoginActivity : AppCompatActivity() {
                     .setAction("Action", null).show()
         }
 
-        login_button.setOnClickListener { view ->
-            Toast.makeText(view.context, "Login", Toast.LENGTH_SHORT).show() }
+        login_button.setOnClickListener({ view ->
+            startActivity(Intent(view.context, MainActivity::class.java))
+        })
     }
 
 }

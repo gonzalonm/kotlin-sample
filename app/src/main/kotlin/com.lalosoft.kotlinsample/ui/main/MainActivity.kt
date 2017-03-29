@@ -1,4 +1,4 @@
-package com.lalosoft.kotlinsample
+package com.lalosoft.kotlinsample.ui.main
 
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar
 import android.view.View
 import android.view.Menu
 import android.view.MenuItem
+import com.lalosoft.kotlinsample.R
 
 class MainActivity : AppCompatActivity() {
 
