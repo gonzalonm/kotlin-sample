@@ -1,3 +1,3 @@
 package com.lalosoft.kotlinsample.domain
 
-data class User (val username : String, val password : String)
+class User constructor(username: String, password: String)

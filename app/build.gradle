@@ -42,7 +42,7 @@ dependencies {
     compile dependencies.supportConstraint
 
     //Rx
-    compile dependencies.rxJava
+    compile dependencies.rxAndroid
 
     //Dagger2
     /*

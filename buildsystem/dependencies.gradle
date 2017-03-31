@@ -3,8 +3,12 @@ ext {
     final supportVersion = '25.1.0'
     final constraintVersion = '1.0.2'
     final retrofitVersion = '2.1.0'
-    final rxVersion = '2.0.1'
+    final rxAndroidVersion = '2.0.1'
+    final rxJavaVersion = '2.0.2'
     final daggerVersion = '2.8'
+    final okHttpVersion = '2.5.0'
+    final javaxInjectVersion = '1'
+    final gsonVersion = '2.3'
 
     dependencies = [
 
@@ -21,7 +25,14 @@ ext {
             daggerCompiler       : "com.google.dagger:dagger-compiler:$daggerVersion",
 
             //RxJava
-            rxJava               : "io.reactivex.rxjava2:rxandroid:$rxVersion",
+            rxAndroid            : "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion",
+            rxJava               : "io.reactivex.rxjava2:rxjava:$rxJavaVersion",
+
+            okHttp               : "com.squareup.okhttp:okhttp:$okHttpVersion",
+            javaxInject          : "javax.inject:javax.inject:$javaxInjectVersion",
+
+            //Gson
+            gson                 : "com.google.code.gson:gson:${gsonVersion}",
 
             //Retrofit
             retrofit             : "com.squareup.retrofit2:retrofit:$retrofitVersion",

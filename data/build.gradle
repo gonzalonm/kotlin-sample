@@ -39,10 +39,14 @@ dependencies {
     compile dependencies.supportAppCompat
 
     //Rx
-    compile dependencies.rxJava
+    compile dependencies.rxAndroid
 
-    //Retrofit
-    compile dependencies.retrofit
-    compile dependencies.retrofitGsonConverter
-    compile dependencies.retrofitRxJavaAdapter
+    //JavaX
+    compile dependencies.javaxInject
+
+    //Gson
+    compile dependencies.gson
+
+    //okHttp
+    compile dependencies.okHttp
 }

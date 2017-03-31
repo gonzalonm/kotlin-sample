@@ -7,6 +7,12 @@ dependencies {
 
     //Kotlin
     compile dependencies.kotlin
+
+    //Rx
+    compile dependencies.rxJava
+
+    //JavaX
+    compile dependencies.javaxInject
 }
 
 sourceSets {
