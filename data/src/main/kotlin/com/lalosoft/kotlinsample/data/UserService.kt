@@ -1,7 +1,6 @@
-package com.lalosoft.kotlinsample.data.remote
+package com.lalosoft.kotlinsample.data
 
-import com.lalosoft.kotlinsample.data.model.Response
-import com.lalosoft.kotlinsample.data.model.User
+import com.lalosoft.kotlinsample.domain.User
 import io.reactivex.Observable
 import retrofit2.http.GET
 import retrofit2.http.Path

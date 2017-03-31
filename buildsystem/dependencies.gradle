@@ -11,7 +11,6 @@ ext {
             kotlin               : "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
 
             //Android Support
-            support              : "com.android.support:appcompat-v7:$supportVersion",
             supportAppCompat     : "com.android.support:appcompat-v7:$supportVersion",
             supportDesign        : "com.android.support:design:$supportVersion",
             supportRecyclerView  : "com.android.support:recyclerview-v7:$supportVersion",

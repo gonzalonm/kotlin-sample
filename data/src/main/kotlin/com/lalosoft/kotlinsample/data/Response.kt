@@ -1,4 +1,4 @@
-package com.lalosoft.kotlinsample.data.model
+package com.lalosoft.kotlinsample.data
 
 /**
  * Created by gonzalo on 3/29/17

@@ -1,6 +1,6 @@
 package com.lalosoft.kotlinsample.data
 
-import com.lalosoft.kotlinsample.data.model.User
+import com.lalosoft.kotlinsample.domain.User
 import io.reactivex.Observable
 
 /**

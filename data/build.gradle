@@ -1,16 +1,18 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
+
     defaultConfig {
-        applicationId "com.lalosoft.kotlinsample"
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
+
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
     }
     buildTypes {
         release {
@@ -27,33 +29,20 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
     compile project(':domain')
-    compile project(':data')
 
     def dependencies = rootProject.ext.dependencies
-    def testDependencies = rootProject.ext.testDependencies
 
     //Kotlin
     compile dependencies.kotlin
 
     //Android Support
     compile dependencies.supportAppCompat
-    compile dependencies.supportRecyclerView
-    compile dependencies.supportDesign
-    compile dependencies.supportConstraint
 
     //Rx
     compile dependencies.rxJava
 
-    //Dagger2
-    /*
-    provided dependencies.javaxAnnotation
-    compile dependencies.dagger
-    kapt dependencies.daggerCompiler
-    */
-
-    //Tests
-    testCompile testDependencies.jUnit
-}
-repositories {
-    mavenCentral()
+    //Retrofit
+    compile dependencies.retrofit
+    compile dependencies.retrofitGsonConverter
+    compile dependencies.retrofitRxJavaAdapter
 }
