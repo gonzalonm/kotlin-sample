@@ -24,6 +24,6 @@ class UserDataRepository @Inject constructor(val userDataStoreFactory: UserDataS
 
     override fun user(userId: Int): Observable<User>? {
         val userDataStore = this.userDataStoreFactory.create(userId);
-        return userDataStore.userEntityDetails(userId)?.map(this.userEntityDataMapper::transform);
+        return userDataStore.userEntityDetails(userId)?.map(this.userEntityDataMapper::transform)
     }
 }

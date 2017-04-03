@@ -2,31 +2,36 @@ package com.lalosoft.kotlinsample.ui.login
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.design.widget.FloatingActionButton
-import android.support.design.widget.Snackbar
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.Toolbar
+import android.widget.Toast
 import com.lalosoft.kotlinsample.R
+import com.lalosoft.kotlinsample.ui.basic.BaseActivity
 import com.lalosoft.kotlinsample.ui.main.MainActivity
-import kotlinx.android.synthetic.main.content_login.*
+import kotlinx.android.synthetic.main.activity_login.*
 
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : BaseActivity<LoginPresenter>(), LoginView {
+
+    override fun buildPresenter(): LoginPresenter {
+        return LoginPresenter(this)
+    }
+
+    override fun getResLayout(): Int {
+        return R.layout.activity_login
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
-        val toolbar = findViewById(R.id.toolbar) as Toolbar
-        setSupportActionBar(toolbar)
 
-        val fab = findViewById(R.id.fab) as FloatingActionButton
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
-        }
-
-        login_button.setOnClickListener({ view ->
-            startActivity(Intent(view.context, MainActivity::class.java))
+        login_button.setOnClickListener({
+            presenter.onLoginClick(email.text.toString())
         })
     }
 
+    override fun showEmptyEmailError() {
+        Toast.makeText(this, getString(R.string.error_login_empty), Toast.LENGTH_SHORT).show()
+    }
+
+    override fun showLoginSuccess() {
+        startActivity(Intent(this, MainActivity::class.java))
+        finish()
+    }
 }
